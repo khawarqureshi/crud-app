@@ -1,7 +1,11 @@
-import React from "react";
+import { Typography, makeStyles } from "@material-ui/core";
 
 const Home = () => {
-  return <div>Crud App</div>;
+  return (
+    <>
+      <Typography variant="h4">CRUD App</Typography>
+    </>
+  );
 };
 
 export default Home;
