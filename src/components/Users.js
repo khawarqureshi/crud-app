@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import {
   Table,
@@ -72,8 +73,8 @@ const Users = () => {
                 color="primary"
                 variant="contained"
                 style={{ marginRight: 10 }}
-                // component={Link}
-                to={`/edit/${user._id}`}
+                component={Link}
+                to={`/edit/${user.id}`}
               >
                 Edit
               </Button>

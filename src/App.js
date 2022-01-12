@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddUser from "./components/AddUser";
+import EditUser from "./components/EditUser";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import NotFound from "./components/NotFound";
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
         <Route path="/adduser" element={<AddUser />} />
+        <Route path="/edit/:id" element={<EditUser />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
