@@ -1,8 +1,12 @@
-import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
+import { AppBar, Toolbar, makeStyles } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 
 const useStyle = makeStyles({
   navbarItems: {
+    color: "#ffffff",
     marginRight: 25,
+    textDecoration: "none",
+    fontSize: 20,
   },
 });
 
@@ -11,15 +15,15 @@ const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography className={style.navbarItems} component="h2">
+        <NavLink className={style.navbarItems} to="/">
           Crud Task
-        </Typography>
-        <Typography className={style.navbarItems} component="h2">
+        </NavLink>
+        <NavLink className={style.navbarItems} to="users">
           Users
-        </Typography>
-        <Typography className={style.navbarItems} component="h2">
+        </NavLink>
+        <NavLink className={style.navbarItems} to="adduser">
           Add User
-        </Typography>
+        </NavLink>
       </Toolbar>
     </AppBar>
   );
