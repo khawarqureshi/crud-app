@@ -7,6 +7,9 @@ const useStyle = makeStyles({
     marginRight: 25,
     textDecoration: "none",
     fontSize: 20,
+    "&:hover": {
+      color: "#000000",
+    },
   },
 });
 
@@ -19,7 +22,7 @@ const Navbar = () => {
           Crud Task
         </NavLink>
         <NavLink className={style.navbarItems} to="users">
-          Users
+          Users Info
         </NavLink>
         <NavLink className={style.navbarItems} to="adduser">
           Add User

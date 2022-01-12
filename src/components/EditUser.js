@@ -59,11 +59,11 @@ const EditUser = () => {
     <FormGroup className={classes.container}>
       <Typography variant="h4">Edit User</Typography>
       <FormControl>
-        <InputLabel>Name</InputLabel>
+        <InputLabel>First Name</InputLabel>
         <Input onChange={(e) => handleChange(e)} name="name" value={name} />
       </FormControl>
       <FormControl>
-        <InputLabel>Username</InputLabel>
+        <InputLabel>Last Name</InputLabel>
         <Input
           onChange={(e) => handleChange(e)}
           name="username"
@@ -79,7 +79,7 @@ const EditUser = () => {
         <Input onChange={(e) => handleChange(e)} name="title" value={title} />
       </FormControl>
       <FormControl>
-        <InputLabel>Phone</InputLabel>
+        <InputLabel>Contact No</InputLabel>
         <Input onChange={(e) => handleChange(e)} name="phone" value={phone} />
       </FormControl>
       <Button
@@ -87,7 +87,7 @@ const EditUser = () => {
         color="primary"
         onClick={() => editUserInfo()}
       >
-        Edit User
+        Update User
       </Button>
     </FormGroup>
   );

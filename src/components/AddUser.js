@@ -14,7 +14,7 @@ import { addUser } from "../services/api";
 const useStyle = makeStyles({
   container: {
     width: "50%",
-    margin: "5% 0 0 25%",
+    margin: "2% 0 0 22%",
     "& > *": {
       marginTop: 20,
     },
@@ -47,30 +47,53 @@ const AddUser = () => {
 
   return (
     <FormGroup className={classes.container}>
-      <Typography variant="h4">Add User</Typography>
+      <Typography variant="h5" style={{ color: "#3f51b5" }}>
+        Add User
+      </Typography>
       <FormControl>
-        <InputLabel>Name</InputLabel>
-        <Input onChange={(e) => handleChange(e)} name="name" value={name} />
-      </FormControl>
-      <FormControl>
-        <InputLabel>Username</InputLabel>
+        <InputLabel>First Name</InputLabel>
         <Input
           onChange={(e) => handleChange(e)}
+          required
+          name="name"
+          value={name}
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel>Last Name</InputLabel>
+        <Input
+          onChange={(e) => handleChange(e)}
+          required
           name="username"
           value={username}
         />
       </FormControl>
       <FormControl>
         <InputLabel>Email</InputLabel>
-        <Input onChange={(e) => handleChange(e)} name="email" value={email} />
+        <Input
+          onChange={(e) => handleChange(e)}
+          required
+          name="email"
+          value={email}
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Title</InputLabel>
-        <Input onChange={(e) => handleChange(e)} name="title" value={title} />
+        <Input
+          onChange={(e) => handleChange(e)}
+          required
+          name="title"
+          value={title}
+        />
       </FormControl>
       <FormControl>
-        <InputLabel>Phone</InputLabel>
-        <Input onChange={(e) => handleChange(e)} name="phone" value={phone} />
+        <InputLabel>Contact No</InputLabel>
+        <Input
+          onChange={(e) => handleChange(e)}
+          required
+          name="phone"
+          value={phone}
+        />
       </FormControl>
       <Button variant="contained" color="primary" onClick={() => addUserInfo()}>
         Add User

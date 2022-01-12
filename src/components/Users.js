@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   thead: {
     "& > *": {
       fontSize: 20,
-      background: "#000000",
+      background: "#3f51b5",
       color: "#FFFFFF",
     },
   },
@@ -56,11 +56,11 @@ const Users = () => {
       <TableHead>
         <TableRow className={classes.thead}>
           <TableCell>Id</TableCell>
-          <TableCell>Name</TableCell>
-          <TableCell>Username</TableCell>
+          <TableCell>First Name</TableCell>
+          <TableCell>Last Name</TableCell>
           <TableCell>Title</TableCell>
           <TableCell>Email</TableCell>
-          <TableCell>Phone</TableCell>
+          <TableCell>Contact No</TableCell>
           <TableCell>Actions</TableCell>
         </TableRow>
       </TableHead>
