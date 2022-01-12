@@ -9,5 +9,4 @@ To Run App:
 npm run dev
 
 To Visit App:
-
 localhost:3000/
