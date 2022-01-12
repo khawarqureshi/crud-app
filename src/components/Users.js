@@ -11,7 +11,7 @@ import {
   Button,
   makeStyles,
 } from "@material-ui/core";
-import { getUsers } from "../services/api";
+import { getUsers, deleteUser } from "../services/api";
 
 const useStyles = makeStyles({
   table: {
@@ -36,14 +36,19 @@ const Users = () => {
   const [users, setUsers] = useState([]);
   const classes = useStyles();
 
-  useEffect(() => {
-    getAllUsers();
-  }, []);
-
   const getAllUsers = async () => {
     const res = await getUsers();
     console.log(res.data);
     setUsers(res.data);
+  };
+
+  useEffect(() => {
+    getAllUsers();
+  }, []);
+
+  const deleteUserData = async (id) => {
+    await deleteUser(id);
+    getAllUsers();
   };
 
   return (
@@ -78,7 +83,11 @@ const Users = () => {
               >
                 Edit
               </Button>
-              <Button color="secondary" variant="contained">
+              <Button
+                color="secondary"
+                variant="contained"
+                onClick={() => deleteUserData(user.id)}
+              >
                 Delete
               </Button>
             </TableCell>
