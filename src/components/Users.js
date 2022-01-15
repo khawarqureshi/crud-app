@@ -103,36 +103,40 @@ const Users = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => (
-            <TableRow className={classes.row} key={user.id}>
-              <TableCell>{user.id}</TableCell>
-              <TableCell>{user.firstname}</TableCell>
-              <TableCell>{user.lastname}</TableCell>
-              <TableCell>{user.title}</TableCell>
-              <TableCell>{user.email}</TableCell>
-              <TableCell>{user.phone}</TableCell>
-              <TableCell>
-                <Button
-                  color="primary"
-                  variant="contained"
-                  style={{ marginRight: 10 }}
-                  component={Link}
-                  to={`/edit/${user.id}`}
-                  title="click to edit"
-                >
-                  Edit
-                </Button>
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  onClick={() => deleteUserData(user.id)}
-                  title="click to delete"
-                >
-                  Delete
-                </Button>
-              </TableCell>
-            </TableRow>
-          ))}
+          {users.length > 0 ? (
+            users.map((user) => (
+              <TableRow className={classes.row} key={user.id}>
+                <TableCell>{user.id}</TableCell>
+                <TableCell>{user.firstname}</TableCell>
+                <TableCell>{user.lastname}</TableCell>
+                <TableCell>{user.title}</TableCell>
+                <TableCell>{user.email}</TableCell>
+                <TableCell>{user.phone}</TableCell>
+                <TableCell>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    style={{ marginRight: 10 }}
+                    component={Link}
+                    to={`/edit/${user.id}`}
+                    title="click to edit"
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    color="secondary"
+                    variant="contained"
+                    onClick={() => deleteUserData(user.id)}
+                    title="click to delete"
+                  >
+                    Delete
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <div> No User! </div>
+          )}
         </TableBody>
       </Table>
       {/* {csvArray.length > 0 ? (
