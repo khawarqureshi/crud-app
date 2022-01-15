@@ -22,8 +22,8 @@ const useStyle = makeStyles({
 });
 
 const initialState = {
-  name: "",
-  username: "",
+  firstname: "",
+  lastname: "",
   title: "",
   email: "",
   phone: "",
@@ -31,7 +31,7 @@ const initialState = {
 
 const EditUser = () => {
   const [user, setUser] = useState(initialState);
-  const { name, username, title, email, phone } = user;
+  const { firstname, lastname, title, email, phone } = user;
   const { id } = useParams();
   const classes = useStyle();
   const navigate = useNavigate();
@@ -60,14 +60,18 @@ const EditUser = () => {
       <Typography variant="h4">Edit User</Typography>
       <FormControl>
         <InputLabel>First Name</InputLabel>
-        <Input onChange={(e) => handleChange(e)} name="name" value={name} />
+        <Input
+          onChange={(e) => handleChange(e)}
+          name="firstname"
+          value={firstname}
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Last Name</InputLabel>
         <Input
           onChange={(e) => handleChange(e)}
-          name="username"
-          value={username}
+          name="lastname"
+          value={lastname}
         />
       </FormControl>
       <FormControl>

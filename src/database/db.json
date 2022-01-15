@@ -2,31 +2,31 @@
   "users": [
     {
       "id": 1,
-      "name": "khawar qureshi",
-      "username": "khawarqureshi",
+      "firstname": "khawar ",
+      "lastname": "qureshi",
       "title": "Front-end Developer",
       "email": "khawar@gmail.com",
       "phone": "03214563214"
     },
     {
       "id": 2,
-      "name": "fazeel ashraf",
-      "username": "fazeelAs",
+      "firstname": "fazeel ",
+      "lastname": "ashraf",
       "title": "Back-end Developer",
       "email": "fazeel@gmail.com",
       "phone": "03225663214"
     },
     {
-      "name": "kashif ali",
-      "username": "khasifali",
+      "firstname": "kashif ",
+      "lastname": "ali",
       "title": "developer",
       "email": "kashif@gmail.com",
       "phone": "06453154789",
       "id": 3
     },
     {
-      "name": "Nouman",
-      "username": "kamal",
+      "firstname": "Nouman",
+      "lastname": "kamal",
       "title": "dveeloper",
       "email": "kamal@gmail.com",
       "phone": "03212365412",

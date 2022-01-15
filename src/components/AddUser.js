@@ -22,8 +22,8 @@ const useStyle = makeStyles({
 });
 
 const initialState = {
-  name: "",
-  username: "",
+  firstname: "",
+  lastname: "",
   title: "",
   email: "",
   phone: "",
@@ -31,7 +31,7 @@ const initialState = {
 
 const AddUser = () => {
   const [user, setUser] = useState(initialState);
-  const { name, username, title, email, phone } = user;
+  const { firstname, lastname, title, email, phone } = user;
   const classes = useStyle();
   const navigate = useNavigate();
 
@@ -55,8 +55,8 @@ const AddUser = () => {
         <Input
           onChange={(e) => handleChange(e)}
           required
-          name="name"
-          value={name}
+          name="firstname"
+          value={firstname}
         />
       </FormControl>
       <FormControl>
@@ -64,8 +64,8 @@ const AddUser = () => {
         <Input
           onChange={(e) => handleChange(e)}
           required
-          name="username"
-          value={username}
+          name="lastname"
+          value={lastname}
         />
       </FormControl>
       <FormControl>
